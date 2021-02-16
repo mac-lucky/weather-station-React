@@ -85,39 +85,48 @@ export default function FullWidthTabs() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <h1>Actual</h1>
-          <Iframe
-            frameBorder="0"
-            width="1000"
-            height="260"
-            url="https://thingspeak.com/channels/1293688/charts/2?bgcolor=%23282424&color=%23f4c50a&dynamic=true&results=300&type=line&update=15&width=1000&title=Temperature"
-          ></Iframe>
+          <h1 style={{ textAlign: "center" }}>Actual</h1>
           <div style={{ paddingTop: "5rem" }}>
             <Iframe
-              width="1000"
+              frameBorder="0"
+              width="380"
+              height="260"
+              url="https://thingspeak.com/channels/1293688/charts/2?bgcolor=%23282424&color=%23f4c50a&dynamic=true&results=300&type=line&update=15&width=1000&title=Temperature"
+            ></Iframe>
+          </div>
+          <div style={{ paddingTop: "5rem" }}>
+            <Iframe
+              width="380"
               height="260"
               frameBorder="0"
               url="https://thingspeak.com/channels/1293688/charts/2?bgcolor=%23282424&color=%23f4c50a&dynamic=true&results=60&type=line&update=15"
             ></Iframe>
           </div>
-          <Iframe
-            frameBorder="0"
-            width="450"
-            height="260"
-            url="https://thingspeak.com/channels/1293688/charts/2?bgcolor=%23282424&color=%23f4c50a&dynamic=true&results=60&type=line&update=15"
-          ></Iframe>
-          <Iframe
-            frameBorder="0"
-            width="450"
-            height="260"
-            url="https://thingspeak.com/channels/1293688/charts/2?bgcolor=%23282424&color=%23f4c50a&dynamic=true&results=60&type=line&update=15"
-          ></Iframe>
+          <div style={{ paddingTop: "5rem" }}>
+            <Iframe
+              frameBorder="0"
+              width="380"
+              height="260"
+              url="https://thingspeak.com/channels/1293688/charts/2?bgcolor=%23282424&color=%23f4c50a&dynamic=true&results=60&type=line&update=15"
+            ></Iframe>
+          </div>
+          <div style={{ paddingTop: "5rem" }}>
+            <Iframe
+              frameBorder="0"
+              width="380"
+              height="260"
+              url="https://thingspeak.com/channels/1293688/charts/2?bgcolor=%23282424&color=%23f4c50a&dynamic=true&results=60&type=line&update=15"
+            ></Iframe>
+          </div>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           Item Two
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           Item Three
+        </TabPanel>
+        <TabPanel value={value} index={3} dir={theme.direction}>
+          Item Four
         </TabPanel>
       </SwipeableViews>
     </div>
