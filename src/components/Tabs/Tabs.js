@@ -1,4 +1,5 @@
 import React from "react";
+import "./Tabs.css";
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
@@ -7,10 +8,9 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import Iframe from "react-iframe";
-import { useEffect, useState } from "react";
+import Charts from "../Charts/Charts";
 
-function TabPanel(props) {
+const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
 
   return (
@@ -28,7 +28,7 @@ function TabPanel(props) {
       )}
     </div>
   );
-}
+};
 
 TabPanel.propTypes = {
   children: PropTypes.node,
@@ -45,37 +45,11 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: "transparent",
     width: "100%",
   },
 }));
 
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height,
-  };
-}
-
-export function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  return windowDimensions;
-}
-
-export default function FullWidthTabs() {
+const FullWidthTabs = (props) => {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
@@ -87,10 +61,6 @@ export default function FullWidthTabs() {
   const handleChangeIndex = (index) => {
     setValue(index);
   };
-
-  const { height, width } = getWindowDimensions();
-  console.log(width);
-
 
   return (
     <div className={classes.root}>
@@ -116,42 +86,16 @@ export default function FullWidthTabs() {
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
           <h1 style={{ textAlign: "center" }}>Actual</h1>
-          <div style={{ paddingTop: "5rem", width: "80%", margin: "auto" }}>
-            width = {width}
-            <Iframe
-              frameBorder="0"
-              width="100%"
-              height="260"
-              url="https://thingspeak.com/channels/1293688/charts/1?bgcolor=%23282424&color=%23f4c50a&dynamic=true&results=300&type=line&update=15&width=1200"
-            ></Iframe>
-          </div>
-          <div style={{ paddingTop: "5rem", width: "80%", margin: "auto" }}>
-            <Iframe
-              frameBorder="0"
-              width="100%"
-              height="260"
-              url="https://thingspeak.com/channels/1293688/charts/2?bgcolor=%23282424&color=%23f4c50a&dynamic=true&results=300&type=line&update=15&width=1200"
-            ></Iframe>
-          </div>
-          <div style={{ paddingTop: "5rem", width: "80%", margin: "auto" }}>
-            <Iframe
-              frameBorder="0"
-              width="100%"
-              height="260"
-              url="https://thingspeak.com/channels/1293688/charts/3?bgcolor=%23282424&color=%23f4c50a&dynamic=true&results=300&type=line&update=15&width=1200"
-            ></Iframe>
-          </div>
-          <div style={{ paddingTop: "5rem", width: "80%", margin: "auto" }}>
-            <Iframe
-              frameBorder="0"
-              width="100%"
-              height="260"
-              url="https://thingspeak.com/channels/1293688/charts/4?bgcolor=%23282424&color=%23f4c50a&dynamic=true&results=300&type=line&update=15&width="
-            ></Iframe>
-          </div>
+          <Charts field={2} days={1} results={200} average={5}/>
+          <Charts field={1} days={1} results={200} average={5}/>
+          <Charts field={3} days={1} results={200} average={5}/>
+          <Charts field={4} days={1} results={200} average={5}/>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          Item Two
+          <Charts field={2} days={7} average={60} results={8000}/>
+          <Charts field={1} days={7} average={60} results={8000}/>
+          <Charts field={3} days={7} average={60} results={8000}/>
+          <Charts field={4} days={7} average={60} results={8000}/>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           Item Three
@@ -162,4 +106,6 @@ export default function FullWidthTabs() {
       </SwipeableViews>
     </div>
   );
-}
+};
+
+export default FullWidthTabs;
