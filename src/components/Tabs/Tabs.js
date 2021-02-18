@@ -86,16 +86,21 @@ const FullWidthTabs = (props) => {
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
           <h1 style={{ textAlign: "center" }}>Actual</h1>
-          <Charts field={2} days={1} results={200} average={5}/>
-          <Charts field={1} days={1} results={200} average={5}/>
-          <Charts field={3} days={1} results={200} average={5}/>
-          <Charts field={4} days={1} results={200} average={5}/>
+          <Charts field={2} title={"Temperature"} days={1} results={200} average={0}/>
+          <Charts field={1} title={"Humidity"} days={1} results={200} average={0}/>
+          <Charts field={3} title={"Pressure"} days={1} results={200} average={0}/>
+          <Charts field={4} title={"LUX"} days={1} results={200} average={0}/>
+          <Charts field={5} title={"Wind+Speed"} days={1} results={200} average={0}/>
+          <Charts field={6} title={"Wind+Direction"} days={1} results={200} average={0}/>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          <Charts field={2} days={7} average={60} results={8000}/>
-          <Charts field={1} days={7} average={60} results={8000}/>
-          <Charts field={3} days={7} average={60} results={8000}/>
-          <Charts field={4} days={7} average={60} results={8000}/>
+        <h1 style={{ textAlign: "center" }}>Actual</h1>
+          <Charts field={2} title={"Temperature"} days={7} results={8000} average={"&average=60"}/>
+          <Charts field={1} title={"Humidity"} days={7} results={8000} average={"&average=60"}/>
+          <Charts field={3} title={"Pressure"} days={7} results={8000} average={"&average=60"}/>
+          <Charts field={4} title={"LUX"} days={7} results={8000} average={"&average=60"}/>
+          <Charts field={5} title={"Wind+Speed"} days={7} results={8000} average={"&average=60"}/>
+          <Charts field={6} title={"Wind+Direction"} days={7} results={8000} average={"&average=60"}/>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           Item Three
