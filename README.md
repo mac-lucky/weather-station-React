@@ -16,8 +16,4 @@ or
 
 Start development server with:
 
-`yarn start`
-
-or
-
-`npm start`
+`yarn start` / `npm start`
