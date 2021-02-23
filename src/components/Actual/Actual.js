@@ -55,14 +55,14 @@ const Actual = () => {
           <div>
             <div className="ActualBox">
               <div className="ActualLeft">
-                <p><img src={icoTemp}/>Temp: {Temperature} °C</p>
-                <p><img src={icoPressure}/>Pressure: {Pressure} hPa</p>
-                <p><img src={icoHumidity}/>Humidity: {Humidity}%</p>
+                <p><img alt="" src={icoTemp}/>Temp: {Temperature} °C</p>
+                <p><img alt="" src={icoPressure}/>Pressure: {Pressure} hPa</p>
+                <p><img alt="" src={icoHumidity}/>Humidity: {Humidity}%</p>
               </div>
               <div>
-                <p><img src={icoLUX}/>Insolation: {LUX} lx</p>
-                <p><img src={icoAnenometr}/>Wind Speed: {WindSpeed} km/h</p>
-                <p><img src={icoDir}/>Wind Direction: {WindDirection} °</p>
+                <p><img alt="" src={icoLUX}/>Insolation: {LUX} lx</p>
+                <p><img alt="" src={icoAnenometr}/>Wind Speed: {WindSpeed} km/h</p>
+                <p><img alt="" src={icoDir}/>Wind Direction: {WindDirection} °</p>
               </div>
             </div>
           </div>
