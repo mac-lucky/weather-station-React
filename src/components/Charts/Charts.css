@@ -1,12 +1,11 @@
 .chartsTab {
-    padding-top: 5rem;
+    padding-top: 8rem;
     width: 93%;
     margin: auto;
   }
   
   @media (max-width: 440px) {
     .chartsTab {
-      padding-top: 5rem;
       width: 100%;
       margin: auto;
     }

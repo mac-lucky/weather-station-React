@@ -13,6 +13,7 @@
     "react-iframe": "^1.8.0",
     "react-scripts": "4.0.2",
     "react-swipeable-views": "^0.13.9",
+    "typeface-montserrat": "^1.1.13",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

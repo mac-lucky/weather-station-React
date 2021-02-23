@@ -12,7 +12,6 @@ const Charts = (props) => {
   return (
     <>
       <div className="chartsTab">
-        width = {width}
         <Iframe frameBorder="0" width="100%" height="360" url={api}></Iframe>
       </div>
     </>

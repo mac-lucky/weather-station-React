@@ -1,0 +1,67 @@
+.ActualContainer {
+  font-family: Montserrat, sans-serif;
+  color: #fff;
+}
+
+.ActualPlace {
+  text-align: center;
+  font-size: 25px;
+}
+
+.ActualWeather {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  padding-top: 8rem;
+}
+
+.ActualWeather img {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 1rem;
+}
+
+.ActualBox {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(24, 26, 27, 0.2);
+  padding: 40px;
+  border-radius: 10px;
+  font-size: 23px;
+}
+
+.ActualProba {
+  margin: 0;
+  padding: 0;
+}
+
+.ActualLeft {
+  padding-right: 5rem;
+}
+
+@media (max-width: 768px) {
+  .ActualWeather {
+    display: block;
+    padding-top: 2rem;
+    width: 100%;
+  }
+
+  .ActualBox {
+    display: block;
+    font-size: 19px;
+    padding: 19px;
+    text-align: center;
+  }
+
+  .ActualPlace {
+    text-align: center;
+    font-size: 23px;
+  }
+
+  .ActualLeft {
+    padding-right: 0;
+  }
+}
