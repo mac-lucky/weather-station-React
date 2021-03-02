@@ -50,7 +50,7 @@ const Actual = () => {
         <div className="ActualWeather">
           <div className="ActualPlace">
             <h1>Wrocław, PL</h1>
-            <h3>Last update: {CurDate}</h3>
+            <h4>Last update: {CurDate}</h4>
           </div>
           <div>
             <div className="ActualBox">
