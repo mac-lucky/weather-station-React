@@ -86,42 +86,179 @@ const FullWidthTabs = (props) => {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-
           <Actual />
 
-          <Charts field={2} title={"Temperature"} days={1} results={200} average={0}/>
-          <Charts field={1} title={"Humidity"} days={1} results={200} average={0}/>
-          <Charts field={3} title={"Pressure"} days={1} results={200} average={0}/>
-          <Charts field={4} title={"LUX"} days={1} results={200} average={0}/>
-          <Charts field={5} title={"Wind+Speed"} days={1} results={200} average={0}/>
-          <Charts field={6} title={"Wind+Direction"} days={1} results={200} average={0}/>
+          <Charts
+            field={2}
+            title={"Temperature"}
+            days={1}
+            results={200}
+            average={0}
+          />
+          <Charts
+            field={1}
+            title={"Humidity"}
+            days={1}
+            results={200}
+            average={0}
+          />
+          <Charts
+            field={3}
+            title={"Pressure"}
+            days={1}
+            results={200}
+            average={0}
+          />
+          <Charts field={4} title={"LUX"} days={1} results={200} average={0} />
+          <Charts
+            field={5}
+            title={"Wind+Speed"}
+            days={1}
+            results={200}
+            average={0}
+          />
+          <Charts
+            field={6}
+            title={"Wind+Direction"}
+            days={1}
+            results={200}
+            average={0}
+          />
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-        <h1 style={{ textAlign: "center" }}>Week</h1>
-          <Charts field={2} title={"Temperature"} days={7} results={8000} average={"&average=60"}/>
-          <Charts field={1} title={"Humidity"} days={7} results={8000} average={"&average=60"}/>
-          <Charts field={3} title={"Pressure"} days={7} results={8000} average={"&average=60"}/>
-          <Charts field={4} title={"LUX"} days={7} results={8000} average={"&average=60"}/>
-          <Charts field={5} title={"Wind+Speed"} days={7} results={8000} average={"&average=60"}/>
-          <Charts field={6} title={"Wind+Direction"} days={7} results={8000} average={"&average=60"}/>
+          <h1 className="centerWhite">Week</h1>
+          <Charts
+            field={2}
+            title={"Temperature"}
+            days={7}
+            results={8000}
+            average={"&average=60"}
+          />
+          <Charts
+            field={1}
+            title={"Humidity"}
+            days={7}
+            results={8000}
+            average={"&average=60"}
+          />
+          <Charts
+            field={3}
+            title={"Pressure"}
+            days={7}
+            results={8000}
+            average={"&average=60"}
+          />
+          <Charts
+            field={4}
+            title={"LUX"}
+            days={7}
+            results={8000}
+            average={"&average=60"}
+          />
+          <Charts
+            field={5}
+            title={"Wind+Speed"}
+            days={7}
+            results={8000}
+            average={"&average=60"}
+          />
+          <Charts
+            field={6}
+            title={"Wind+Direction"}
+            days={7}
+            results={8000}
+            average={"&average=60"}
+          />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-        <h1 style={{ textAlign: "center" }}>Month</h1>
-          <Charts field={2} title={"Temperature"} days={31} results={8000} average={"&average=1440"}/>
-          <Charts field={1} title={"Humidity"} days={31} results={8000} average={"&average=1440"}/>
-          <Charts field={3} title={"Pressure"} days={31} results={8000} average={"&average=1440"}/>
-          <Charts field={4} title={"LUX"} days={31} results={8000} average={"&average=1440"}/>
-          <Charts field={5} title={"Wind+Speed"} days={31} results={8000} average={"&average=1440"}/>
-          <Charts field={6} title={"Wind+Direction"} days={31} results={8000} average={"&average=1440"}/>
+          <h1 className="centerWhite">Month</h1>
+          <Charts
+            field={2}
+            title={"Temperature"}
+            days={31}
+            results={8000}
+            average={"&average=1440"}
+          />
+          <Charts
+            field={1}
+            title={"Humidity"}
+            days={31}
+            results={8000}
+            average={"&average=1440"}
+          />
+          <Charts
+            field={3}
+            title={"Pressure"}
+            days={31}
+            results={8000}
+            average={"&average=1440"}
+          />
+          <Charts
+            field={4}
+            title={"LUX"}
+            days={31}
+            results={8000}
+            average={"&average=1440"}
+          />
+          <Charts
+            field={5}
+            title={"Wind+Speed"}
+            days={31}
+            results={8000}
+            average={"&average=1440"}
+          />
+          <Charts
+            field={6}
+            title={"Wind+Direction"}
+            days={31}
+            results={8000}
+            average={"&average=1440"}
+          />
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
-        <h1 style={{ textAlign: "center" }}>Last 6 months</h1>
-          <Charts field={2} title={"Temperature"} days={186} results={8000} average={"&average=daily"}/>
-          <Charts field={1} title={"Humidity"} days={186} results={8000} average={"&average=daily"}/>
-          <Charts field={3} title={"Pressure"} days={186} results={8000} average={"&average=daily"}/>
-          <Charts field={4} title={"LUX"} days={186} results={8000} average={"&average=daily"}/>
-          <Charts field={5} title={"Wind+Speed"} days={186} results={8000} average={"&average=daily"}/>
-          <Charts field={6} title={"Wind+Direction"} days={186} results={8000} average={"&average=daily"}/>
+          <h1 className="centerWhite">Last 6 months</h1>
+          <Charts
+            field={2}
+            title={"Temperature"}
+            days={186}
+            results={8000}
+            average={"&average=daily"}
+          />
+          <Charts
+            field={1}
+            title={"Humidity"}
+            days={186}
+            results={8000}
+            average={"&average=daily"}
+          />
+          <Charts
+            field={3}
+            title={"Pressure"}
+            days={186}
+            results={8000}
+            average={"&average=daily"}
+          />
+          <Charts
+            field={4}
+            title={"LUX"}
+            days={186}
+            results={8000}
+            average={"&average=daily"}
+          />
+          <Charts
+            field={5}
+            title={"Wind+Speed"}
+            days={186}
+            results={8000}
+            average={"&average=daily"}
+          />
+          <Charts
+            field={6}
+            title={"Wind+Direction"}
+            days={186}
+            results={8000}
+            average={"&average=daily"}
+          />
         </TabPanel>
       </SwipeableViews>
     </div>
