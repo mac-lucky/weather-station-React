@@ -24,3 +24,4 @@ yarn-error.log*
 .idea/modules.xml
 .idea/vcs.xml
 .idea/weather-station-React.iml
+yarn.lock
