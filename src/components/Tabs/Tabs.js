@@ -78,6 +78,7 @@ const FullWidthTabs = (props) => {
           <Tab label="Week" {...a11yProps(1)} />
           <Tab label="Month" {...a11yProps(2)} />
           <Tab label="Last 6 Months" {...a11yProps(3)} />
+          <Tab label="Last Year" {...a11yProps(4)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -258,6 +259,51 @@ const FullWidthTabs = (props) => {
             days={186}
             results={8000}
             average={"&average=daily"}
+          />
+        </TabPanel>
+        <TabPanel value={value} index={4} dir={theme.direction}>
+          <h1 className="centerWhite">Last Year</h1>
+          <Charts
+              field={2}
+              title={"Temperature"}
+              days={364}
+              results={8000}
+              average={"&average=daily"}
+          />
+          <Charts
+              field={1}
+              title={"Humidity"}
+              days={364}
+              results={8000}
+              average={"&average=daily"}
+          />
+          <Charts
+              field={3}
+              title={"Pressure"}
+              days={364}
+              results={8000}
+              average={"&average=daily"}
+          />
+          <Charts
+              field={4}
+              title={"LUX"}
+              days={364}
+              results={8000}
+              average={"&average=daily"}
+          />
+          <Charts
+              field={5}
+              title={"Wind+Speed"}
+              days={364}
+              results={8000}
+              average={"&average=daily"}
+          />
+          <Charts
+              field={6}
+              title={"Wind+Direction"}
+              days={364}
+              results={8000}
+              average={"&average=daily"}
           />
         </TabPanel>
       </SwipeableViews>
