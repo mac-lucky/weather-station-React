@@ -1,9 +1,9 @@
 import "./App.css";
 import Tabs from "./components/Tabs/Tabs";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 
 function App() {
-  const darkTheme = createMuiTheme({
+  const darkTheme = createTheme({
     palette: {
       type: "dark",
     },

@@ -7,7 +7,8 @@ import "./Charts.css";
 const Charts = (props) => {
   const { width } = useWindowDimensions();
   const widthString = Math.round(width * 0.885);
-  const api = "https://thingspeak.com/channels/1293688/charts/" + props.field + "?bgcolor=%23282424&color=%23f4c50a&dynamic=true&title=" + props.title + "&results=" + props.results +"&type=line&height=360&update=15&width=" + widthString + "&days=" + props.days + props.average;
+  const api = "https://thingspeak.com/channels/1293688/charts/" + props.field + "?bgcolor=%23282424&color=%23f4c50a&dynamic=true&title=" + props.title + "&results=" + props.results +"&type=line&height=360&update=15&width=" + widthString;
+  // "&days=" + props.days + props.average not working thngspeak api
 
   return (
     <>
